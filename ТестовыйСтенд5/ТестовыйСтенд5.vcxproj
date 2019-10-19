@@ -130,6 +130,7 @@
     <ClInclude Include="Tray.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Boat.cpp" />
     <ClCompile Include="Keeper.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Sail.cpp" />

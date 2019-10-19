@@ -41,6 +41,12 @@ Sail::Sail()
 	}
 }
 
+Sail::Sail(ifstream& fin)
+{
+	setType(2);
+	fin >> this->name >> this->typeSail >> this->destination >> this->_long >> this->speed >> this->people;
+}
+
 Sail::~Sail()
 {
 	cout << "Был вызван деструктор класса Sail" << endl;

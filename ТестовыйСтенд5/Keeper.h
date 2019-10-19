@@ -1,6 +1,7 @@
 ﻿#pragma once
 #include "Tray.h"
 #include "Sail.h"
+#include "Boat.h"
 #include <fstream>
 /*
 Разработать класс Keeper, который реализует контейнер для хранения и обработки
@@ -19,6 +20,7 @@ public:
 	~Keeper();
 	int getSize();
 	void add();
+	void add(int _type, ifstream& fin);
 	void del();
 	void save();
 	void load();

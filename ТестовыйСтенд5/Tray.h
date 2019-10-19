@@ -11,6 +11,7 @@ class Tray : public Ship
 	string arms;
 public:
 	Tray();
+	Tray(ifstream &fin);
 	~Tray();
 	void save(ofstream& fout);
 };

@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include "Keeper.h"
 using namespace std;
 
@@ -11,12 +11,13 @@ int main()
 	{
 		system("cls");
 		cout << "----------------------------------" << endl
-			<< "               ÌÅÍŞ               " << endl
+			<< "               ĞœĞ•ĞĞ®               " << endl
 			<< "----------------------------------" << endl
-			<< "Êîë-âî ıëåìåíòîâ â êîíòåéíåğå : [" << Konten.getSize() << "]" << endl
-			<< "[1] Äîáàâèòü ıëåìåíò" << endl
-			<< "[2] Ñîõğàíèòü äàííûå â ôàéë" << endl
-			<< "[3] Âûõîä" << endl;
+			<< "ĞšĞ¾Ğ»-Ğ²Ğ¾ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚Ğ¾Ğ² Ğ² ĞºĞ¾Ğ½Ñ‚ĞµĞ¹Ğ½ĞµÑ€Ğµ : [" << Konten.getSize() << "]" << endl
+			<< "[1] Ğ”Ğ¾Ğ±Ğ°Ğ²Ğ¸Ñ‚ÑŒ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚" << endl
+			<< "[2] Ğ¡Ğ¾Ñ…Ñ€Ğ°Ğ½Ğ¸Ñ‚ÑŒ Ğ´Ğ°Ğ½Ğ½Ñ‹Ğµ Ğ² Ñ„Ğ°Ğ¹Ğ»" << endl
+			<< "[3] Ğ—Ğ°Ğ³Ñ€ÑƒĞ·Ğ¸Ñ‚ÑŒ Ğ´Ğ°Ğ½Ğ½Ñ‹Ğµ Ğ¸Ğ· Ñ„Ğ°Ğ¹Ğ»Ğ°" << endl
+			<< "[4] Ğ’Ñ‹Ñ…Ğ¾Ğ´" << endl;
 		cin >> menu;
 		system("cls");
 		switch (menu)
@@ -28,10 +29,13 @@ int main()
 			Konten.save();
 			break;
 		case 3:
+			Konten.load();
+			break;
+		case 4:
 			return 0;
 		default:
 			break;
 		}
-		/*Ìåíş*/
+		/*ĞœĞµĞ½Ñ*/
 	} while (true);
 }

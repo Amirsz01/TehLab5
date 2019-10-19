@@ -15,6 +15,7 @@ class Sail : public Ship
 	int people;
 public:
 	Sail();
+	Sail(ifstream& fin);
 	~Sail();
 	void save(ofstream& fout);
 };

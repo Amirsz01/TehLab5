@@ -37,6 +37,12 @@ Tray::Tray()
 	}
 }
 
+Tray::Tray(ifstream& fin)
+{
+	setType(1);
+	fin >> this->length  >> this->wigth >> this->people >> this->speed >> this->time >> this->arms;
+}
+
 Tray::~Tray()
 {
 	cout << "Был вызван деструктор класса Tray" << endl;
