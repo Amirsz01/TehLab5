@@ -24,4 +24,5 @@ public:
 	void del();
 	void save();
 	void load();
+	friend ostream& operator<<(ostream& out, Keeper& obj);
 };

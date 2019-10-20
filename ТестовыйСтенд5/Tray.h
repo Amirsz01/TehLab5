@@ -14,4 +14,5 @@ public:
 	Tray(ifstream &fin);
 	~Tray();
 	void save(ofstream& fout);
+	void print(ostream& out);
 };

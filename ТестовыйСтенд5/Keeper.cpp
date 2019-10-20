@@ -1,4 +1,4 @@
-#include "Keeper.h"
+п»ї#include "Keeper.h"
 
 Keeper::Keeper()
 {
@@ -18,12 +18,12 @@ int Keeper::getSize()
 
 void Keeper::add()
 {
-	int type; // Тип наследника
-	cout << "Выберите класс наследника: " << endl
-		<< "[1] Лодка" << endl
-		<< "[2] Парусник" << endl
-		<< "[3] Катер" << endl
-		<< "Ваш выбор: ";
+	int type; // РўРёРї РЅР°СЃР»РµРґРЅРёРєР°
+	cout << "Р’С‹Р±РµСЂРёС‚Рµ РєР»Р°СЃСЃ РЅР°СЃР»РµРґРЅРёРєР°: " << endl
+		<< "[1] Р›РѕРґРєР°" << endl
+		<< "[2] РџР°СЂСѓСЃРЅРёРє" << endl
+		<< "[3] РљР°С‚РµСЂ" << endl
+		<< "Р’Р°С€ РІС‹Р±РѕСЂ: ";
 	cin >> type;
 	Ship** tmp = new Ship * [size + 1];
 	for (int i = 0; i < size; i++)
@@ -48,7 +48,7 @@ void Keeper::add()
 	if(data)
 		delete[] data;
 	data = tmp;
-	cout << "Элемент успешно добавлен" << endl;
+	cout << "Р­Р»РµРјРµРЅС‚ СѓСЃРїРµС€РЅРѕ РґРѕР±Р°РІР»РµРЅ" << endl;
 	system("pause");
 }
 
@@ -77,7 +77,6 @@ void Keeper::add(int _type, ifstream &fin)
 	if (data)
 		delete[] data;
 	data = tmp;
-	system("pause");
 }
 
 void Keeper::del()
@@ -98,8 +97,6 @@ void Keeper::load()
 {
 	ifstream fin("output.txt");
 	int type = 0;
-	/*if (!fin.is_open())
-		cout << "Файл не может быть открыт!\n";*/
 	while (fin)
 	{
 		fin >> type;
@@ -108,5 +105,20 @@ void Keeper::load()
 		add(type, fin);
 	}
 	fin.close();
-	system("pause");
+	cout << "Р­Р»РµРјРµРЅС‚С‹ СѓСЃРїРµС€РЅРѕ Р·Р°РіСЂСѓР¶РµРЅС‹ РёР· С„Р°Р№Р»Р°" << endl;
+}
+
+ostream& operator<<(ostream& out, Keeper& obj)
+{
+	if (!obj.size)
+	{
+		cout << "[INFO] РљРѕРЅС‚РµР№РЅРµСЂ РїСѓСЃС‚! Р—Р°РіСЂСѓР·РёС‚Рµ С„Р°Р№Р»С‹ РёР· С„Р°Р№Р»Р° РёР»Рё РґРѕР±Р°РІСЊС‚Рµ РЅРѕРІС‹Рµ СЌР»РµРјРµРЅС‚С‹." << endl;
+		system("pause");
+		return out;
+	}
+	for (int i = 0; i < obj.size; i++)
+	{
+		obj.data[i]->print(out);
+	}
+	return out;
 }

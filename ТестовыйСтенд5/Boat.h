@@ -16,4 +16,5 @@ public:
 	Boat(ifstream &fin);
 	~Boat();
 	void save(ofstream& fout);
+	void print(ostream& out);
 };

@@ -11,4 +11,5 @@ public:
 	int getType();
 	virtual void save(ofstream& fout) = 0;
 	virtual ~Ship() = 0;
+	virtual void print(ostream& out) = 0;
 };
