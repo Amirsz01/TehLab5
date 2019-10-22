@@ -69,27 +69,3 @@ void Tray::print(ostream& out)
 		<< "Скорость : " << speed << endl
 		<< "Вооружение : " << arms << endl;
 }
-
-/*ofstream& operator<<(ofstream& f, Tray& obj)
-{
-	f << obj.getType() << endl
-		<< obj.length << endl
-		<< obj.wigth << endl
-		<< obj.people << endl
-		<< obj.time << endl
-		<< obj.speed << endl
-		<< obj.arms << endl;
-	return f;
-}*/
-
-/*ostream& operator<<(ostream& out, Ship& obj)
-{
-	out << obj.getType() << endl
-		<< obj.length << endl
-		<< obj.wigth << endl
-		<< obj.people << endl
-		<< obj.time << endl
-		<< obj.speed << endl
-		<< obj.arms << endl;
-	return out;
-}*/
