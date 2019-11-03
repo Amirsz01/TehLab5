@@ -16,9 +16,10 @@ int main()
 			<< "----------------------------------" << endl
 			<< "Кол-во элементов в контейнере : [" << Konten.getSize() << "]" << endl
 			<< "[1] Добавить элемент" << endl
-			<< "[2] Сохранить данные в файл" << endl
-			<< "[3] Загрузить данные из файла" << endl
-			<< "[4] Вывести данные из контейнера" << endl
+			<< "[2] Удалить элемент" << endl
+			<< "[3] Сохранить данные в файл" << endl
+			<< "[4] Загрузить данные из файла" << endl
+			<< "[5] Вывести данные из контейнера" << endl
 			<< "[0] Выход" << endl;
 		cin >> menu;
 		system("cls");
@@ -28,12 +29,15 @@ int main()
 			Konten.add();
 			break;
 		case 2:
-			Konten.save();
+			Konten.del();
 			break;
 		case 3:
-			Konten.load();
+			Konten.save();
 			break;
 		case 4:
+			Konten.load();
+			break;
+		case 5:
 			cout << Konten;
 			break;
 		case 0:
@@ -41,7 +45,6 @@ int main()
 		default:
 			break;
 		}
-		system("pause");
 		/*Меню*/
 	} while (true);
 }

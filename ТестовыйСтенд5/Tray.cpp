@@ -30,10 +30,12 @@ Tray::Tray()
 		cin >> this->speed;
 		cout << "Введите вооружение лодки : ";
 		cin >> this->arms;
+		setError(false);
 	}
 	catch (string err)
 	{
-		cout << "ERROR: " + err;
+		cout << "ERROR: " + err << endl;
+		setError(true);
 	}
 }
 

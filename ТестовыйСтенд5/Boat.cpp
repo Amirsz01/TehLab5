@@ -5,7 +5,7 @@ Boat::Boat()
 	cout << "----------------------------------\n     Добавление катера     \n----------------------------------" << endl << endl;
 	try
 	{
-		setType(2);
+		setType(3);
 		cout << "Введите матеариал корпуса катера = ";
 		cin >> this->material;
 		cout << "Введите ходовые качества = ";
@@ -28,16 +28,18 @@ Boat::Boat()
 		{
 			throw (string)"Скорость не может быть отрицательна";
 		}
+		setError(false);
 	}
 	catch (string err)
 	{
-		cout << "ERROR: " + err;
+		cout << "ERROR: " + err << endl;
+		setError(true);
 	}
 }
 
 Boat::Boat(ifstream& fin)
 {
-	setType(1);
+	setType(3);
 	fin >> this->destination >> this->material >> this->speed >> this->people >> this->_class;
 }
 

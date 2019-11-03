@@ -34,10 +34,12 @@ Sail::Sail()
 		{
 			throw (string)"Длина не может быть отрицательна";
 		}
+		setError(false);
 	}
 	catch (string err)
 	{
-		cout << "ERROR: " + err;
+		cout << "ERROR: " + err << endl;
+		setError(true);
 	}
 }
 
