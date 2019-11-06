@@ -17,6 +17,7 @@ public:
 	Sail();
 	Sail(ifstream& fin);
 	~Sail();
+	void edit();
 	void save(ofstream& fout);
 	void print(ostream& out);
 };

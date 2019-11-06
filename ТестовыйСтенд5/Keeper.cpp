@@ -97,6 +97,57 @@ void Keeper::add(int _type, ifstream &fin)
 	data = tmp;
 }
 
+void Keeper::edit()
+{
+	int index;
+	if (!size)
+	{
+		cout << "[INFO] Контейнер пуст! Загрузите файлы из файла или добавьте новые элементы." << endl;
+		system("pause");
+		return;
+	}
+	try
+	{
+		for (int i = 0; i < size; i++)
+		{
+			cout << "[" << i << "] ";
+			switch (data[i]->getType())
+			{
+			case 1:
+				cout << "Подводная лодка" << endl;
+				break;
+			case 2:
+				cout << "Парусник" << endl;
+				break;
+			case 3:
+				cout << "Катер" << endl;
+				break;
+			default:
+				break;
+			}
+		}
+		cout << "Выберите элемент для именения: ";
+		cin >> index;
+		if (index < 0 || index > size - 1)
+			throw (string)"Выбранного элемента не существует";
+		data[index]->edit();
+		if (data[index]->isError())
+		{
+			cout << "Элемент не изменен из-за ошибки" << endl;
+		}
+		else
+		{
+			cout << "Элемент изменен успешно" << endl;
+		}
+		system("pause");
+	}
+	catch (string err)
+	{
+		cout << "ERROR: " + err << endl;
+		system("pause");
+	}
+}
+
 void Keeper::del()
 {
 	int index;

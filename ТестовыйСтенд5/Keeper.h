@@ -21,6 +21,7 @@ public:
 	int getSize();
 	void add();
 	void add(int _type, ifstream& fin);
+	void edit();
 	void del();
 	void save();
 	void load();

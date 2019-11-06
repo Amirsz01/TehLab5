@@ -1,6 +1,5 @@
 ﻿#include <iostream>
 #include "Keeper.h"
-#include <windows.h>
 using namespace std;
 
 int main()
@@ -19,7 +18,8 @@ int main()
 			<< "[2] Удалить элемент" << endl
 			<< "[3] Сохранить данные в файл" << endl
 			<< "[4] Загрузить данные из файла" << endl
-			<< "[5] Вывести данные из контейнера" << endl
+			<< "[5] Изменить данные элемента" << endl
+			<< "[6] Вывести данные из контейнера" << endl
 			<< "[0] Выход" << endl;
 		cin >> menu;
 		system("cls");
@@ -38,6 +38,9 @@ int main()
 			Konten.load();
 			break;
 		case 5:
+			Konten.edit();
+			break;
+		case 6:
 			cout << Konten;
 			break;
 		case 0:

@@ -15,6 +15,7 @@ public:
 	Boat();
 	Boat(ifstream &fin);
 	~Boat();
+	void edit();
 	void save(ofstream& fout);
 	void print(ostream& out);
 };
